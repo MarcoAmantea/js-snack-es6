@@ -11,21 +11,16 @@ const bikes = [
   ];
   console.log(bikes);
   
-//Supponiamo che la bici più leggera è quella in posizione 0
-  let lightPeso = bikes[0];
-  console.log(lightPeso);
-  
-  
-//ciclo for che serve a identificare il peso delle altre bici
-  for (let i = 0; i < bikes.length; i++) {
-    const curBikes = bikes[i];
-    console.log(curBikes.peso);
-    
-    //se il peso della bici corrente è minore del peso della bici stampata allora procedo con la stampa
-    if(curBikes.peso < lightPeso.peso){
-       lightPeso = curBikes
-    }
- }
-    console.log(lightPeso)
-   
-    
+let lightBike = bikes[0];
+console.log(lightBike);
+
+for (let i = 0; i < bikes.length; i++) {
+  const curBikes = bikes[i];
+  if(curBikes.peso<lightBike.peso){
+   lightBike = curBikes
+  }
+}
+
+console.log(lightBike);
+
+
